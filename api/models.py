@@ -6,7 +6,7 @@ from django.utils.timezone import now
 class Product(models.Model):
     title = models.CharField(max_length=100)
     price = models.IntegerField()
-    image = models.ImageField(upload_to='images')
+    image = models.ImageField(upload_to='images', null = True, blank=True)
     description = models.TextField()
     date = models.DateTimeField(default=now)
     class Meta:
